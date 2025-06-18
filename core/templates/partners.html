@@ -1,0 +1,12 @@
+{% extends 'core/base.html' %}
+{% block content %}
+<h1 class="text-3xl font-semibold text-center mb-8">Our Partners</h1>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    {% for partner in partners %}
+    <div class="bg-white border-l-4 border-blue-500 p-4 shadow rounded-md">
+        <h2 class="text-xl font-bold text-blue-700">{{ partner.name }}</h2>
+        <p class="text-gray-600">{{ partner.focus }}</p>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

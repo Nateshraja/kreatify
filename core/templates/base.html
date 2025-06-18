@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kreatify</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+  <nav class="bg-white shadow p-4 flex justify-between">
+    <div class="text-xl font-bold">Kreatify</div>
+    <div class="space-x-4">
+      <a href="/" class="hover:text-blue-600">Home</a>
+      <a href="/partners/" class="hover:text-blue-600">Partners</a>
+      <a href="/proposal/" class="hover:text-blue-600">Proposal</a>
+    </div>
+  </nav>
+
+  <main class="p-6">
+    {% block content %}
+    {% endblock %}
+  </main>
+
+  <footer class="text-center p-4 mt-12 border-t">
+    &copy; 2025 Kreatify. All rights reserved.
+  </footer>
+</body>
+</html>
