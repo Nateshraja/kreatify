@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: kreatify
+    env: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt && python manage.py migrate && python manage.py collectstatic --noinput"
+    startCommand: "gunicorn kreatify_project.wsgi:application"
+    envVars:
+      - key: DJANGO_SECRET_KEY
+        value: django-insecure-+ry!=77oibyrzv86_dckdf*ga)6ljyphg3_2s#jfm0%v37iq(s
+      - key: DJANGO_DEBUG
+        value: false
+      - key: EMAIL_HOST_USER
+        value: hiphopnatesh1499@gmail.com
+      - key: EMAIL_HOST_PASSWORD
+        value: yfcgzxeirowkcmua
