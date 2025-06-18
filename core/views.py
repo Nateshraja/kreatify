@@ -11,10 +11,10 @@ PARTNERS = [
 
 def home(request):
     services = ["SEO", "Branding", "Rebranding", "Visual Branding", "Ad Film Making", "Content Writing"]
-    return render(request, 'home.html', {'services': services})
+    return render(request, 'core/home.html', {'services': services})
 
 def partners(request):
-    return render(request, 'partners.html', {'partners': PARTNERS})
+    return render(request, 'core/partners.html', {'partners': PARTNERS})
 
 def proposal(request):
     if request.method == 'POST':
@@ -31,7 +31,7 @@ def proposal(request):
             return redirect('success')
     else:
         form = ProposalForm()
-    return render(request, 'proposal.html', {'form': form})
+    return render(request, 'core/proposal.html', {'form': form})
 
 def success(request):
-    return render(request, 'success.html')
+    return render(request, 'core/success.html')
