@@ -14,3 +14,5 @@ services:
         value: hiphopnatesh1499@gmail.com
       - key: EMAIL_HOST_PASSWORD
         value: yfcgzxeirowkcmua
+      - key: DJANGO_ALLOWED_HOSTS
+        value: kreatify.onrender.com
